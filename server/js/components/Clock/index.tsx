@@ -7,7 +7,7 @@ const Clock = () => {
   const currentTime = useCurrentTime();
 
   return (
-    <div className='px-16 py-8'>
+    <div className='p-16'>
       <div className='text-[110px] leading-none font-light'>
         <span>{currentTime.format('HH')}</span>
         <span className='-mx-4 relative -top-[10px]'>:</span>

@@ -16,7 +16,7 @@ const TFLArrivals = ({ title, line, stationCode, direction, maxCount = 5 }: Prop
   const loading = !arrivalsData && !disruptionData;
 
   return (
-    <div className='flex flex-col flex-1 p-16'>
+    <div className='flex flex-col flex-1 px-16 py-32'>
       <div className='text-2xl mb-4'>
         { title }
       </div>
