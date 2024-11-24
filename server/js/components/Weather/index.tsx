@@ -6,7 +6,7 @@ const Weather = () => {
   const data = useWeatherData();
 
   return (
-    <div className='px-8 py-4'>
+    <div className='px-16 py-8'>
       {data ? <WeatherContent data={data} /> : <LoadingMessage />}
     </div>
   );
