@@ -73,15 +73,23 @@ const ArrivalRow = ({ arrival }: { arrival: ArrivalData }) => {
 const DisruptionContent = ({ data }: { data: DisruptionData[] }) => {
   if (data.length === 0) return null;
 
+  // return (
+  //   <div className='mt-4'>
+  //     {
+  //       data.map((disruption) => (
+  //         <div key={disruption.description} className='p-2 border-2'>
+  //           { disruption.description }
+  //         </div>
+  //       ))
+  //     }
+  //   </div>
+  // );
+
   return (
     <div className='mt-4'>
-      {
-        data.map((disruption) => (
-          <div key={disruption.description} className='p-2 border-2'>
-            { disruption.description }
-          </div>
-        ))
-      }
+      <div className='p-2 border-2'>
+        There { data.length === 1 ? 'is' : 'are' } { data.length } disruption{ data.length === 1 ? '' : 's' } on this line
+      </div>
     </div>
   );
 };
