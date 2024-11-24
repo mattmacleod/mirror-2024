@@ -1,0 +1,14 @@
+build
+dist
+node_modules
+coverage.out
+yarn-error.log
+server/assets
+tmp
+*.swp
+.DS_Store
+.idea
+yalc.lock
+.yalc/
+scratch
+.swc

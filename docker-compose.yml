@@ -5,21 +5,20 @@ volumes:
   tailscale:
 
 services:
+  server:
+    build: ./server
+    network_mode: host
 
-  # server:
-  #   build: ./server
-  #   network_mode: host
-
-  # kiosk:
-  #   build: ./kiosk
-  #   network_mode: host
-  #   depends_on:
-  #     - weston
-  #     - server
-  #   devices:
-  #     - /dev/dri/card0
-  #   volumes:
-  #     - 'wayland-socket:/run/shm/wayland'
+  kiosk:
+    build: ./kiosk
+    network_mode: host
+    depends_on:
+      - weston
+      - server
+    devices:
+      - /dev/dri/renderD128
+    volumes:
+      - 'wayland-socket:/run/shm/wayland'
 
   weston:
     build: ./weston
